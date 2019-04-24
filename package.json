@@ -1,0 +1,40 @@
+{
+  "name": "bus-application-backend",
+  "version": "1.0.0",
+  "description": "An application to track Bus party distributing books",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint",
+    "start": "webpack-dev-server --mode development",
+    "start:watch": "nodemon src/index.js",
+    "build": "webpack --config webpack.config.js"
+  },
+  "author": "Dipmalya Sen",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "nodemon": "^1.18.11",
+    "npm-run-all": "^4.1.5",
+    "regenerator-runtime": "^0.13.2",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "mongoose": "^5.5.2",
+    "morgan": "^1.9.1",
+    "uniqid": "^5.0.3"
+  }
+}
