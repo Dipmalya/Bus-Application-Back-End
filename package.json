@@ -4,7 +4,6 @@
   "description": "An application to track Bus party distributing books",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint",
     "start": "webpack-dev-server --mode development",
     "start:watch": "nodemon src/index.js",
     "build": "webpack --config webpack.config.js"
