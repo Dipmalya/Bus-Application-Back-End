@@ -30,6 +30,7 @@ router.post("/entry", jwtMWare.checkToken, (req, res, next) => {
         population = "",
         comments = ""
     } = req.body;
+
     const newRecord = new Record({
         _id: new mongoose.Types.ObjectId(),
         recordId: uniqid.time(),
@@ -44,6 +45,7 @@ router.post("/entry", jwtMWare.checkToken, (req, res, next) => {
         population,
         comments
     });
+
     newRecord
         .save()
         .then(() => {

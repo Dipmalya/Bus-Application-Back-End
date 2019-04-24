@@ -31,7 +31,10 @@ router.get("/:userId", (req, res, next) => {
 });
 
 router.post("/login", (req, res, next) => {
-  const { email = "", password = "" } = req.body;
+  const {
+    email = "",
+    password = ""
+  } = req.body;
   User.findOne({ email }, { __v: 0 })
     .exec()
     .then(user => {
@@ -46,13 +49,15 @@ router.post("/login", (req, res, next) => {
         });
       } else {
         res.status(201).json({
-          message: "Username or Password is invalid"
+          message: "Username or Password is invalid",
+          success: false
         });
       }
     })
-    .catch(err =>
+    .catch(() =>
       res.status(500).json({
-        message: err
+        message: "Username or Password is invalid",
+        success: false
       })
     );
 });
@@ -66,7 +71,7 @@ router.post("/register", (req, res, next) => {
   } = req.body;
 
   User.countDocuments({
-    $or: [{ email }, { name }, { mobile }]
+    $or: [{ email }, { mobile }]
   })
     .exec()
     .then(result => {
