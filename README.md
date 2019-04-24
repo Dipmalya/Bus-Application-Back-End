@@ -16,5 +16,6 @@ Collections:-
 2. For records - "recordsDB"
 
 Commands:- 
-1. "npm run build" - Build project.
-2. "npm run start:watch" - Run project in watch mode
+1. "npm install" - Install node modules
+2. "npm run build" - Build project.
+3. "npm run start:watch" - Run project in watch mode
