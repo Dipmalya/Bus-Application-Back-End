@@ -1,4 +1,4 @@
-# Bus-Application
+# Bus-Application-Backend
 Entry point of the application is - /src/index.js
 
 Database configuration is - /src/db.config.js
