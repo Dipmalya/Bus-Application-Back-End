@@ -42,8 +42,9 @@ router.post("/login", (req, res, next) => {
         const token = jwt.sign({ email }, jwtMWare.secret, {
           expiresIn: "24h"
         });
+        const userDoc = user._doc;
         res.status(200).json({
-          ...user._doc,
+          userDoc,
           token,
           success: true
         });

@@ -6,6 +6,10 @@
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "start:watch": "nodemon src/index.js",
+    "start:dev": "npm-run-all build:prod start:watch",
+    "lint": "eslint *",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
     "build": "webpack --config webpack.config.js"
   },
   "author": "Dipmalya Sen",

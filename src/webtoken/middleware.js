@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 const secret = "ISKCON";
 
 const checkToken = (req, res, next) => {
-  const token = req.headers["x-access-token"] || req.headers["authorization"];
+  let token = req.headers["x-access-token"] || req.headers["authorization"];
 
   if (token) {
     if (token.startsWith("Bearer ")) {
